@@ -4,9 +4,18 @@ import {TestComponent} from './testComponent';
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Open up App.js to start working on your app, dawg!</Text>
       <TestComponent />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex:1,
+    backgroundColor: 'pink',
+    justifyContent:'center',
+    alignItems:'center'
+  }
+})
