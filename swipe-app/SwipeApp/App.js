@@ -7,9 +7,10 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app, dawg!</Text>
       {/* Instantiating multiple instances of the component */}
-      <TestComponent name={'Nik'} age={20}/>
-      <TestComponent name={'Sean'} age={12}/>
-      <TestComponent name={'Ben'} age={40}/>
+      <TestComponent name={'Chinmay'} age={20}/>
+      <TestComponent name={'Kungeng'} age={25}/>
+      <TestComponent name={'Terence'} age={12}/>
+      <TestComponent name={'Hassaan'} age={40}/>
     </View>
   );
 }
