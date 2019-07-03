@@ -1,11 +1,11 @@
 import React from 'react';
 import {Text, View,TouchableOpacity,StyleSheet } from 'react-native';
 export class TestComponent extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
-            name: 'Hassaan',
-            age: 20
+            name: this.props.name,
+            age: this.props.age
         }
     }
     render() {
