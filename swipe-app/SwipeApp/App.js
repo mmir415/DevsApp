@@ -6,7 +6,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app, dawg!</Text>
-      <TestComponent />
+      {/* Instantiating multiple instances of the component */}
+      <TestComponent name={'Nik'} age={20}/>
+      <TestComponent name={'Sean'} age={12}/>
+      <TestComponent name={'Ben'} age={40}/>
     </View>
   );
 }
