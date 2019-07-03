@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View,TouchableOpacity } from 'react-native';
+import {Text, View,TouchableOpacity,StyleSheet } from 'react-native';
 export class TestComponent extends React.Component {
     constructor(){
         super()
@@ -11,7 +11,7 @@ export class TestComponent extends React.Component {
     render() {
         return(
             <View>
-                <Text>Hello, my name is {this.state.name}!</Text>
+                <Text style={styles.textStyle}>Hello, my name is {this.state.name}!</Text>
                 <Text>My age is {this.state.age}</Text>
 
                 {/* On Press below triggers the called function when pressed */}
@@ -33,3 +33,13 @@ export class TestComponent extends React.Component {
 
     }
 }
+// Adding a stylesheet
+const styles = StyleSheet.create({
+    // Gotta create keys
+    textStyle: {
+        color: 'red',
+        fontSize: 20,
+        backgroundColor: 'cyan'
+    }
+
+})
