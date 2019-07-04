@@ -1,30 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { LoginScreen } from "./screens/LoginScreen/LoginScreen";
-import { createBottomTabNavigator, createSwitchNavigator, createAppContainer } from "react-navigation";
 import { MapScreen } from "./screens/MapScreen/MapScreen";
+import { SwipeScreen } from "./screens/SwipeScreen/SwipeScreen";
 import { ReviewScreen } from "./screens/ReviewScreen/ReviewScreen";
-import { SwipeScreen } from "./screens/SwipeScreen/SwipeScreen"
+import { createBottomTabNavigator, createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { AppProvider } from './AppProvider';
-
-
 
 const TabNavigator = createBottomTabNavigator({
   map: MapScreen,
-  review: ReviewScreen,
-  swipe: SwipeScreen
-})
+  swipe: SwipeScreen,
+  review: ReviewScreen
+});
 
-const SwitchNavigator = createSwitchNavigator({
-  login: LoginScreen,
+const MainNavigator = createSwitchNavigator({
+  auth: LoginScreen,
   main: TabNavigator
 }, {
   initialRouteName: "main"
 })
 
-const AppContainer = createAppContainer(SwitchNavigator);
-
-
+const AppContainer = createAppContainer(MainNavigator);
 
 export default class App extends React.Component {
   render() {
@@ -35,3 +31,4 @@ export default class App extends React.Component {
     );
   }
 }
+
